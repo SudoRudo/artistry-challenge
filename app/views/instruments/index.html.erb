@@ -1,0 +1,7 @@
+<h1> Our Specialties </h1>
+
+<% @instruments.each do |instrument| %>
+<%= "#{instrument.name}, Class: #{instrument.classification}" %><br>
+<% end %><br>
+
+<%= link_to 'Back to Artists', artists_path %>

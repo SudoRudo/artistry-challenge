@@ -1,0 +1,17 @@
+<h1> New Paring </h1>
+
+<div class='error'>
+<% if flash[:my_errors]%>
+<% flash[:my_errors].each do |error|%>
+<p><%= error%></p>
+<% end %>
+<% end %>
+</div>
+
+
+<%= form_for @artist_instrument do |f|%>
+<%= f.collection_select :artist_id, @artists, :id, :name%> loves to play 
+<%= f.collection_select :instrument_id, @instruments, :id, :name%>
+<br>
+<%= f.submit %>
+<%end%>
